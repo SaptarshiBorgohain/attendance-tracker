@@ -1,0 +1,174 @@
+table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    /* Hide the table headers on small screens */
+    th {
+      display: none;
+    }
+  
+    /* Display the table rows as block elements for mobile view */
+    tr {
+      display: block;
+      margin-bottom: 12px;
+    }
+  
+    /* Display the table cells as inline elements */
+    td {
+      display: inline-block;
+      width: 100%;
+    }
+  
+    /* Add some spacing and center-align the buttons */
+    td button {
+      margin: 4px;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Hide the delete button on small screens */
+    /* td:last-child {
+      display: none;
+    } */
+    .show-delete-button td:last-child {
+      display: block;
+    }
+  
+    /* Hide the delete button by default */
+    td:last-child {
+      display: none;
+    }
+  
+    @media (min-width: 600px) {
+      /* Show the delete button on screens larger than 600px */
+      .show-delete-button td:last-child {
+        display: table-cell;
+      }
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .button-row button {
+      flex-grow: 1;
+      margin-right: 5px;
+    }
+
+    .add-subject-row input[type="text"],
+    .add-subject-row button {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 600px) {
+    /* Adjust the input and button layout for small screens */
+    .add-subject-row input[type="text"],
+    .add-subject-row button {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+
+
+
+  .attendance-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .attendance-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-content {
+    margin-bottom: 10px;
+  }
+
+  .card-content h3 {
+    margin: 0;
+  }
+
+  .attendance-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attendance-details div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  .attendance-details div span {
+    font-weight: bold;
+  }
+
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add-subject-card input[type="text"] {
+    width: 100%;
+    padding: 5px;
+  }
+
+
+  }
+
+  .ring {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 10px solid #ccc;
+    }
+    
+    .progress {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      clip: rect(0, 50px, 100px, 0);
+      background-color: #4caf50;
+      transform: rotate(180deg);
+    }
+    
+    .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4caf50;
+    }
+    
